@@ -1,6 +1,8 @@
 # passta-works
 
-## [Paas-Ta Intallation History] ./pass-ta-installation.md 
+## Paas-Ta Intallation History
+
+> [Paas-Ta Intallation History](./pass-ta-installation.md)
 
 ## Pass-Ta Build-Pack Development
 
