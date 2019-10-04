@@ -1,10 +1,17 @@
-## 2019.08.02~2019.08.14
+## 2019.08.17~2019.09.14
+
+## 이전 이력 
+* [2019.08](./instll-history.md)
+
 ### 환경
-* OS : Cent OS 6
+* OS / HW : Ubuntu 18.04.3 LTS ,  Mem 128GB / HDD 600GB
 * bosh : bosh-lite, Git-Hub에서 직접 받은 설치 파일 
 * Paas-Ta : 버전 4.0 , Paas-Ta 교육 가이드 문서링크 설치파일 (http://amedio0222.ipdisk.co.kr/pubdav/HDD2/dev/paasta-4.0.tar) 
 * VirtualBox :  5.2.20 및 5.2.32r132073
-* PaaS-Ta 질의응답 : https://paas-ta.kr/notice/qna_view/440?query=%EA%B9%80%EC%9A%A9%EC%84%9D&query_type=all&query_type2=all&start=1
+* PaaS-Ta 질의응답 #448 : https://paas-ta.kr/notice/qna_view/488
+
+### 
+
 
 ### 결과 
  
