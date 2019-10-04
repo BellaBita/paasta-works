@@ -99,16 +99,26 @@ Task 618 | 01:20:47 | Error: 'router/c2428899-c8bd-4bac-9ca9-ac4ee2041746 (0)' i
 
 #### <<api서버 문제발생 내역 >>
 **api서버 (10.244.0.134)의 'routing-api'의 출력로그 **
+(파일 : /var/vcap/data/sys/log/routing-api/routing-api.stderr.log)
 
 <pre><code> 
- 
+
+...
 goroutine 1 [running]:
-code.cloudfoundry.org/lager.(*logger).Fatal(0xc00023db00, 0xafed3a, 0x1e, 0xb9e980, 0x10bf060, 0x0, 0x0, 0x0)
+code.cloudfoundry.org/lager.(*logger).Fatal(0xc0001e7e60, 0xafed3a, 0x1e, 0xb9e980, 0x10bf060, 0x0, 0x0, 0x0)
         /var/vcap/data/compile/routing-api/src/code.cloudfoundry.org/lager/logger.go:154 +0x4fc
 main.main()
         /var/vcap/data/compile/routing-api/src/code.cloudfoundry.org/routing-api/cmd/routing-api/main.go:145 +0x18e0
-2019/08/14 15:08:26 grpc: addrConn.resetTransport failed to create client transport: connection error: desc = "transport: dial tcp: operation was canceled"; Reconnecting to {locket.service.cf.internal:8891 }
+2019/10/04 02:24:28 grpc: addrConn.resetTransport failed to create client transport: connection error: desc = "transport: dial tcp: operation was canceled"; Reconnecting to {locket.service.cf.internal:8891 <nil>}
 panic: context deadline exceeded
+
+goroutine 1 [running]:
+code.cloudfoundry.org/lager.(*logger).Fatal(0xc00021be60, 0xafed3a, 0x1e, 0xb9e980, 0x10bf060, 0x0, 0x0, 0x0)
+        /var/vcap/data/compile/routing-api/src/code.cloudfoundry.org/lager/logger.go:154 +0x4fc
+main.main()
+        /var/vcap/data/compile/routing-api/src/code.cloudfoundry.org/routing-api/cmd/routing-api/main.go:145 +0x18e0
+panic: context deadline exceeded
+...
 
 </code></pre>
 
