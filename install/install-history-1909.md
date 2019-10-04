@@ -1,4 +1,4 @@
-## 2019.08.17~2019.09.14
+## PaaS-Ta 설치 및 기술지원 이력 (2019.09)
 
 ## 이전 이력 
 * [2019.08](./instll-history.md)
@@ -10,8 +10,31 @@
 * VirtualBox :  5.2.20 및 5.2.32r132073
 * PaaS-Ta 질의응답 #448 : https://paas-ta.kr/notice/qna_view/488
 
-### 
+### 9/19 가이드 메일에 대한  (from paasta@paas-ta.kr)
+<pre>
+안녕하세요!
 
+문의하신 bosh-lite 설치관련하여 답변드립니다.
+
+paasta의 api vm에 routing-api가 업데이트는 되었지만 정상 동작을 하지않아 routing vm배포가 제대로 되지 않는것으로 확인이 됩니다.
+
+우선 아래와 같이 확인 부탁드립니다.
+1. bosh -e vbox vms명령어를 통하여 api vms 접속
+   - bosh -e vbox -d paasta ssh api
+2. sudo 권한으로 변경
+3. monit stop routing 후 monit start routing
+4. bosh-lite 재배포 테스트
+
+위의 작업을 진행하였지만 배포가 안되시면 아래와 같은 내용을 첨부하여 재질문 해 주시기 바랍니다.
+
+1. 물리장비  os 및 버전
+2. 설치한 virtualbox 버전
+3. bosh-lite 배포시 사용한 bosh-deployment안의 bosh.yml 
+4. bosh-lite 배포시 사용한 paasta-deployment.yml
+5. virtual box Local Route 설정
+
+감사합니다.
+</pre>
 
 ### 결과 
  
