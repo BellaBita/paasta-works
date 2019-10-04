@@ -9,7 +9,8 @@
 ### 결과 
  
 ##### <<./deploy-bosh-lite.sh의 출력로그>>
-<code>
+
+<pre><code>
 
 Task 32
 
@@ -29,12 +30,12 @@ Task 32 Started  Tue Aug 13 17:29:20 UTC 2019
 Task 32 Finished Tue Aug 13 18:06:00 UTC 2019
 Task 32 Duration 00:36:40
 Task 32 error
-</code>
+</code></pre>
 
 #### <<api서버 문제발생 내역 >>
 **api서버 (10.244.0.134)의 'routing-api'가 제데로 기동하지 못하는 데서 기인하는 것 같고, 오류는 아래와 같이 출력**
 
-<code> 
+<pre><code> 
  
 goroutine 1 [running]:
 code.cloudfoundry.org/lager.(*logger).Fatal(0xc00023db00, 0xafed3a, 0x1e, 0xb9e980, 0x10bf060, 0x0, 0x0, 0x0)
@@ -44,4 +45,4 @@ main.main()
 2019/08/14 15:08:26 grpc: addrConn.resetTransport failed to create client transport: connection error: desc = "transport: dial tcp: operation was canceled"; Reconnecting to {locket.service.cf.internal:8891 }
 panic: context deadline exceeded
 
-</code>
+</code></pre>
