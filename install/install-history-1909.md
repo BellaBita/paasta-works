@@ -1,7 +1,7 @@
 ## PaaS-Ta 설치 및 기술지원 이력 (2019.09)
 
 ## 이전 이력 
-* [2019.08](./instll-history.md)
+* [2019.08](./instll-history-1908.md)
 
 ### 환경
 * OS / HW : Ubuntu 18.04.3 LTS ,  Mem 128GB / HDD 600GB
