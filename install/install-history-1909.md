@@ -36,6 +36,53 @@ paasta의 api vm에 routing-api가 업데이트는 되었지만 정상 동작을
 감사합니다.
 </pre>
 
+===
+위 메일데로 조치한 내역 
+<pre>
+1. monit stop routing, monit start routing 실행 결과 
+    bosh로 api VM에 접속후 다음 명령을 실행 
+api/3c985c5e-61ee-4575-a51a-12fa1ede6d1c:/var/vcap$ sudo /var/vcap/bosh/bin/monit stop routing
+monit: action failed −− There is no service by that name
+api/3c985c5e-61ee-4575-a51a-12fa1ede6d1c:/var/vcap$ sudo /var/vcap/bosh/bin/monit start routing
+monit: action failed −− There is no service by that name
+
+2. bosh-lite 재배포
+./deploy-bosh-lite.sh 실행결과 
+
+Task 618
+
+Task 618 | 00:57:14 | Preparing deployment: Preparing deployment (00:00:38)
+Task 618 | 00:57:52 | Preparing deployment: Rendering templates (00:00:23)
+Task 618 | 00:58:16 | Preparing package compilation: Finding packages to compile (00:00:01)
+Task 618 | 00:58:18 | Updating instance api: api/3c985c5e-61ee-4575-a51a-12fa1ede6d1c (0) (canary)       (00:01:57)
+Task 618 | 01:00:15 | Updating instance router: router/c2428899-c8bd-4bac-9ca9-ac4ee2041746 (0) (canary) (00:20:31)
+                    L Error: 'router/c2428899-c8bd-4bac-9ca9-ac4ee2041746 (0)' is not running after update. Review logs for failed jobs: gorouter
+Task 618 | 01:20:47 | Error: 'router/c2428899-c8bd-4bac-9ca9-ac4ee2041746 (0)' is not running after update. Review logs for failed jobs: gorouter
+
+Task 618 Started  Thu Sep 26 00:57:14 UTC 2019
+Task 618 Finished Thu Sep 26 01:20:47 UTC 2019
+Task 618 Duration 00:23:33
+Task 618 error
+
+</pre>
+<pre>
+1. 물리장비  os 및 버전
+ubuntu@lena-srv:~$ cat /etc/issue
+Ubuntu 18.04.3 LTS
+
+2. 설치한 virtualbox 버전
+ubuntu@lena-srv:~$ vboxmanage −−version
+5.2.20r125813
+
+3. bosh-lite 배포시 사용한 bosh-deployment안의 bosh.yml  : 첨부참조 (bosh.yml, paasta-deployment.yml 합본)
+4. bosh-lite 배포시 사용한 paasta-deployment.yml : 첨부참조
+
+5. virtual box Local Route 설정
+ubuntu@lena-srv:~$ ip route
+10.244.0.0/16 via 192.168.50.6 dev vboxnet0
+192.168.50.0/24 dev vboxnet0 proto kernel scope link src 192.168.50.1
+</pre>
+
 ### 결과 
  
 ##### <<./deploy-bosh-lite.sh의 출력로그>>
