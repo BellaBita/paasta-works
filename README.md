@@ -3,8 +3,8 @@
 
 ## Paas-Ta Intallation History
 
-> [설치이력 '19.08](./install/install-history.md)
-> [설치이력 '19.09](./install/install-history-1909.md)
+> 1. [설치이력 '19.08](./install/install-history.md)
+> 2. [설치이력 '19.09](./install/install-history-1909.md)
 
 ## Pass-Ta Build-Pack Development
 
