@@ -9,11 +9,7 @@
 ### 결과 
  
 ##### <<./deploy-bosh-lite.sh의 출력로그>>
-
 <pre><code>
-
-Task 32
-
 Task 32 | 17:29:20 | Preparing deployment: Preparing deployment (00:00:35)
 Task 32 | 17:29:55 | Preparing deployment: Rendering templates (00:00:20)
 Task 32 | 17:30:16 | Preparing package compilation: Finding packages to compile (00:00:01)
