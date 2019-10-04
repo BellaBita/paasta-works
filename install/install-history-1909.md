@@ -66,18 +66,20 @@ Task 618 error
 
 > ##### 문의사항에 대한 답변
 > 1. 물리장비  os 및 버전
->>  * Ubuntu 18.04.3 LTS
+>  * Ubuntu 18.04.3 LTS
 
 > 2. 설치한 virtualbox 버전</b>
->> * 5.2.20r125813
+>  * 5.2.20r125813
 > 3. bosh-lite 배포시 사용한 bosh-deployment안의 bosh.yml  
->>  * 링크 참조 : [bosh.yml](./201909/bosh.yml) 
+>  * 링크 참조 : [bosh.yml](./201909/bosh.yml) 
 > 4. bosh-lite 배포시 사용한 paasta-deployment.yml : 첨부참조
->>  * 링크 참조 : [paasta-deployment.yml](./201909/paasta-deployment.yml)
+>  * 링크 참조 : [paasta-deployment.yml](./201909/paasta-deployment.yml)
 > 5. virtual box Local Route 설정
->> ubuntu@lena-srv:~$ ip route
->> 10.244.0.0/16 via 192.168.50.6 dev vboxnet0
->> 192.168.50.0/24 dev vboxnet0 proto kernel scope link src 192.168.50.1
+<pre>
+ubuntu@lena-srv:~$ ip route
+10.244.0.0/16 via 192.168.50.6 dev vboxnet0
+192.168.50.0/24 dev vboxnet0 proto kernel scope link src 192.168.50.1
+</pre>
 
 
 ### 설치 결과 
