@@ -1,7 +1,7 @@
-## PaaS-Ta 설치 및 기술지원 이력 (2019.09)
+## PaaS-Ta 설치 및 기술지원 이력 (2019.08)
 
-## 이전 이력 
-* [2019.08](./instll-history.md)
+## 관련 이력 
+* [2019.09](./instll-history-1909.md)
 
 ### 환경
 * OS / HW : **CentOS 6.10** ,  Mem 128GB / HDD 600GB
